@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolu Aladağlarda Yeşil Sınıf Eğitimi 3</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- 1. Banner -->
+  <header class="w-full">
+    <img
+      src="Banner.png"
+      alt="Bolu Aladağlarda Yeşil Sınıf Eğitimi 3"
+      class="w-full object-cover"
+    />
+    <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-800 mt-8 mb-4 px-4">
+      Bolu Aladağlarda Yeşil Sınıf Eğitimi 3
+    </h1>
+  </header>
+
+  <!-- 2. Form İkonları -->
+  <main class="flex-1 flex items-center justify-center px-6 py-12">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+
+      <!-- İkon 1: Aktif -->
+      <a href="#" class="group flex flex-col items-center gap-4 no-underline">
+        <img
+          src="1ikon.png"
+          alt="Öğrenci Görüş Formu"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg transition-transform group-hover:scale-105"
+        />
+        <span class="font-bold text-center text-slate-800">Öğrenci Görüş Formu</span>
+      </a>
+
+      <!-- İkon 2: Pasif (zamanı gelince grayscale, opacity-50, pointer-events-none, cursor-not-allowed kaldırın ve href ekleyin) -->
+      <a href="#" class="flex flex-col items-center gap-4 no-underline grayscale opacity-50 pointer-events-none cursor-not-allowed">
+        <img
+          src="2ikon.png"
+          alt="Ekolojik Ayak İzi"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+        />
+        <span class="font-bold text-center text-slate-800">Ekolojik Ayak İzi</span>
+      </a>
+
+      <!-- İkon 3: Pasif (zamanı gelince grayscale, opacity-50, pointer-events-none, cursor-not-allowed kaldırın ve href ekleyin) -->
+      <a href="#" class="flex flex-col items-center gap-4 no-underline grayscale opacity-50 pointer-events-none cursor-not-allowed">
+        <img
+          src="3ikon.png"
+          alt="Etkinlik Değerlendirme Formu"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+        />
+        <span class="font-bold text-center text-slate-800">Etkinlik Değerlendirme Formu</span>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- 3. Proje Linki -->
+  <div class="flex justify-center px-6 pb-8">
+    <a
+      href="https://4000.tubitak.gov.tr/4004/325b115"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm sm:text-base font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100 hover:border-slate-400 hover:shadow-md"
+    >
+      Proje Sayfasını Ziyaret Edin
+    </a>
+  </div>
+
+  <!-- 4. Footer Görseli -->
+  <footer class="w-full mt-auto">
+    <img
+      src="Footer.png"
+      alt="Footer"
+      class="w-full h-24 object-cover"
+    />
+  </footer>
+
+</body>
+</html>
