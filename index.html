@@ -18,7 +18,7 @@
     <img
       src="Banner.png"
       alt="Bolu Aladağlarda Yeşil Sınıf Eğitimi 3"
-      class="w-full h-auto"
+      class="block w-full h-auto max-h-40 sm:max-h-48 md:max-h-56 object-contain object-center mx-auto"
     />
     <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-800 mt-8 mb-4 px-4">
       Bolu Aladağlarda Yeşil Sınıf Eğitimi 3
@@ -26,35 +26,51 @@
   </header>
 
   <!-- 2. Form İkonları -->
+  <!-- Pasif formlar: href başındaki # işaretini silince otomatik aktif olur -->
   <main class="flex-1 flex items-center justify-center px-6 py-12">
     <div class="flex flex-col md:flex-row items-center justify-center gap-12">
 
       <!-- İkon 1: Aktif -->
-      <a href="#" class="group flex flex-col items-center gap-4 no-underline">
+      <a
+        href="https://forms.gle/CZvGiX5uYd546iEJ9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="form-icon group flex flex-col items-center gap-4 no-underline"
+      >
         <img
           src="1ikon.png"
           alt="Öğrenci Görüş Formu"
-          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg transition-transform group-hover:scale-105"
+          class="form-icon-img w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg transition-transform group-hover:scale-105"
         />
         <span class="font-bold text-center text-slate-800">Öğrenci Görüş Formu</span>
       </a>
 
-      <!-- İkon 2: Pasif (zamanı gelince grayscale, opacity-50, pointer-events-none, cursor-not-allowed kaldırın ve href ekleyin) -->
-      <a href="#" class="flex flex-col items-center gap-4 no-underline grayscale opacity-50 pointer-events-none cursor-not-allowed">
+      <!-- İkon 2: Pasif — aktif etmek için href başındaki # işaretini silin -->
+      <a
+        href="#https://forms.gle/UMWuTCFqXZvpPf2V6"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="form-icon flex flex-col items-center gap-4 no-underline"
+      >
         <img
           src="2ikon.png"
           alt="Ekolojik Ayak İzi"
-          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+          class="form-icon-img w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg transition-transform"
         />
         <span class="font-bold text-center text-slate-800">Ekolojik Ayak İzi</span>
       </a>
 
-      <!-- İkon 3: Pasif (zamanı gelince grayscale, opacity-50, pointer-events-none, cursor-not-allowed kaldırın ve href ekleyin) -->
-      <a href="#" class="flex flex-col items-center gap-4 no-underline grayscale opacity-50 pointer-events-none cursor-not-allowed">
+      <!-- İkon 3: Pasif — aktif etmek için href başındaki # işaretini silin -->
+      <a
+        href="#https://forms.gle/MMyhWrzrFgT1V19M9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="form-icon flex flex-col items-center gap-4 no-underline"
+      >
         <img
           src="3ikon.png"
           alt="Etkinlik Değerlendirme Formu"
-          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
+          class="form-icon-img w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg transition-transform"
         />
         <span class="font-bold text-center text-slate-800">Etkinlik Değerlendirme Formu</span>
       </a>
@@ -75,13 +91,30 @@
   </div>
 
   <!-- 4. Footer Görseli -->
-  <footer class="w-full h-auto">
+  <footer class="w-full mt-auto">
     <img
       src="Footer.png"
       alt="Footer"
-      class="w-full h-24 object-cover"
+      class="block w-full h-auto max-h-28 sm:max-h-36 md:max-h-44 object-contain object-center mx-auto"
     />
   </footer>
+
+  <script>
+    document.querySelectorAll("a.form-icon").forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      var img = link.querySelector(".form-icon-img");
+
+      if (href.charAt(0) === "#") {
+        link.classList.add("grayscale", "opacity-50", "pointer-events-none", "cursor-not-allowed");
+        link.classList.remove("group");
+        if (img) img.classList.remove("group-hover:scale-105");
+      } else {
+        link.classList.add("group");
+        link.classList.remove("grayscale", "opacity-50", "pointer-events-none", "cursor-not-allowed");
+        if (img) img.classList.add("group-hover:scale-105");
+      }
+    });
+  </script>
 
 </body>
 </html>
